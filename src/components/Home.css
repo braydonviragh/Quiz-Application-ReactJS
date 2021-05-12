@@ -1,0 +1,17 @@
+* {
+  margin: 0;
+}
+h1 {
+  font-size: 5em;
+}
+html,
+body {
+  font-family: "Josefin Sans", sans-serif;
+  box-sizing: border-box;
+  width: 100% !important;
+  height: 100%;
+  margin: 0px !important;
+  padding: 0px !important;
+  overflow-x: hidden;
+  margin-right: 0 !important;
+}
