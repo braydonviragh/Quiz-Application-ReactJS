@@ -14,12 +14,12 @@ const AnimeQuiz = ({
             return (
                 <div className=" w-1/2 mt-10 absolute left-1/4 right-1/4">
 
-                    <div className="flex flex-col pt-5">
-                        <div className="bg-white text-blue-600 rounded p-10 text-center mt-5">
+                    <div className="flex flex-col pt-3">
+                        <div className="bg-white text-blue-600 rounded p-10 text-center mt-3">
                             <h2 className="text-5xl font-bold" dangerouslySetInnerHTML={{ __html: question}}/>
                         </div>
                     
-                        <div className="mt-5 grid grid-cols-2 gap-6  mt-6 text-3xl">
+                        <div className="mt-5 grid grid-cols-2 gap-6  mt-3 text-lg">
                             {answers.map((answer) => { 
                                 const textColour = showAnswers 
                                 ? answer === correct_answer 
