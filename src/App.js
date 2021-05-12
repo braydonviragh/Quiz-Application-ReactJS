@@ -12,7 +12,7 @@ import TQuiz from './components/Television/TQuiz';
 
 const App = () => {
     return (
-        <Router className="App__container">
+        <Router className="App__container container">
             <Navbar/>
             <Switch>
                 <Route path='/' exact component= {Home}/>
