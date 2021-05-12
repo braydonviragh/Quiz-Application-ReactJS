@@ -19,7 +19,7 @@ const AnimeQuiz = ({
                             <h2 className="text-2xl font-bold" dangerouslySetInnerHTML={{ __html: question}}/>
                         </div>
                     
-                        <div className="mt-5 grid grid-cols-2 gap-  mt-3 text-xl">
+                        <div className="mt-5 grid grid-cols-2 gap-6  mt-3 text-xl">
                             {answers.map((answer) => { 
                                 const textColour = showAnswers 
                                 ? answer === correct_answer 
