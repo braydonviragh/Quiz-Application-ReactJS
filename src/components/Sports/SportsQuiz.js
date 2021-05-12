@@ -12,7 +12,7 @@ const AnimeQuiz = ({
         answers},
     }) => {
             return (
-                <div className=" w-1/2 mx-auto p-11  pt-5">
+                <div className="lg:w-1/2 md:w-full sm:w-full mx-auto p-11  pt-5">
 
                     <div className="flex flex-col">
                         <div className="bg-white text-blue-800 rounded p-5 text-center mt-3">
