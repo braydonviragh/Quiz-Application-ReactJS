@@ -11,7 +11,7 @@ function Home() {
             <div className="flex justify-center flex-col w-full justify-center items-start py-10 p-10 ">
                 <h1 className="font-bold text-3xl my-4">YOU THINK YOU CAN QUIZ?</h1>
                 <p className="leading-normal mb-4">Well, do you ? Below are several skill testing quizs supplied by the Open Trivia Database API. Each quiz comes with 10 multiple choice questions in each listed category. <br/> HOW TO PLAY: Choose topic below, read question and click on 1 of 4 answers provided. </p>
-                <div className="container text-center md:text-lg mt-5 flex flex-wrap justify-around ">
+                <div className="container md:text-lg mt-5 flex flex-wrap justify-around ">
                     <NavLink exact to="/Quiz">
                     <button className="bg-white hover:bg-blue-500 text-blue-700 w-full font-semibold hover:text-white py-2 m-2 px-6 border border-blue-500 hover:border-transparent rounded">
                         Anime

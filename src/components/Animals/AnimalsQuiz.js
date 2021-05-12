@@ -12,14 +12,14 @@ const AnimeQuiz = ({
         answers},
     }) => {
             return (
-                <div className=" w-full absolute p-10">
+                <div className=" w-1/2 mx-auto p-11  pt-5">
 
                     <div className="flex flex-col">
                         <div className="bg-white text-blue-800 rounded p-5 text-center mt-3">
                             <h2 className="md:text-2xl sm:text-lg font-bold" dangerouslySetInnerHTML={{ __html: question}}/>
                         </div>
                     
-                        <div className="mt-5 grid grid-cols-2 gap-6  mt-1 md:text-lg sm:text-md">
+                        <div className="mt-5 grid grid-cols-2 gap-6 mt-1 md:text-lg sm:text-md">
                             {answers.map((answer) => { 
                                 const textColour = showAnswers 
                                 ? answer === correct_answer 
@@ -36,10 +36,10 @@ const AnimeQuiz = ({
                         
                         </div>
                         {showAnswers && (
-                       <div className="flex justify-end">
+                       <div className="flex justify-center mt-5">
                             <button
                                 onClick={handleNextQuestion}
-                                className="bg-blue-200 text-blue-700  font-semibold mt-2 rounded shadow w-1/5">
+                                className="bg-blue-200 p-5 text-blue-700  font-semibold mt-2 rounded shadow ">
                                     Next Question
                             </button>
                          </div>
