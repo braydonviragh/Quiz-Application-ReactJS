@@ -1,23 +1,21 @@
 import React, {useState, useEffect} from 'react';
 import { NavLink } from 'react-router-dom';
 
-import AnimeQuiz from './AnimeQuiz';
+import MusicalQuiz from './MusicalQuiz';
 
-const API_URL = 'https://opentdb.com/api.php?amount=10&category=31&type=multiple';
+const API_URL = 'https://opentdb.com/api.php?amount=10&category=12&difficulty=easy&type=multiple';
 
-function Quiz() {
+function MusQuiz() {
     const [questions, setQuestions] = useState([]);
     const [currentIndex, setCurrentIndex ] = useState(0);
     const [score, setScore] = useState(0);
     const [gameEnded, setGameEnded] = useState(0);
     const [showAnswers, setShowAnswers] = useState(false);
 
-    //after page renders, do this
     useEffect(() => { 
         fetch(API_URL)
         .then((res) => res.json())
         .then((data) => { 
-            //shuffle questions here then send along
             const questions = data.results.map((question) => 
             ({
                 ...question, 
@@ -31,7 +29,6 @@ function Quiz() {
         });
     }, []);
     
-    //receives answer and processes it
     const handleAnswer = (answer) => { 
         if(!showAnswers) { 
         
@@ -42,7 +39,6 @@ function Quiz() {
         setShowAnswers(true);
     }
 
-    //continues onto next question in array, removes colours/answers
     const handleNextQuestion = () => { 
         setCurrentIndex(currentIndex + 1);
         setShowAnswers(false);
@@ -54,11 +50,10 @@ function Quiz() {
                 
             <div className=" w-1/2 mt-10 absolute left-1/4 right-1/4 top-1/4">
                 <h1 className="text-3xl font-bold text-white text-center">
-                Game Ended, Score: {score} <br/><NavLink exact to="/"><button className="bg-blue-200 text-blue-700 p-4 font-semibold mt-6 rounded shadow">Click Here to Play again</button></NavLink></h1>
+                Game Ended, Score: {score} <br/><NavLink exact to="/"><button className="bg-blue-200 text-blue-700 p-4 font-semibold mt-6 rounded shadow ">Click Here to Play again</button></NavLink></h1>
             </div>
             ) : ( 
-                //sending quiz data to view
-                <AnimeQuiz data={questions[currentIndex]} 
+                <MusicalQuiz data={questions[currentIndex]} 
                 showAnswers={showAnswers}
                 handleNextQuestion={handleNextQuestion}
                 handleAnswer={handleAnswer} />
@@ -69,4 +64,4 @@ function Quiz() {
         );
 }
 
-export default Quiz
+export default MusQuiz;
